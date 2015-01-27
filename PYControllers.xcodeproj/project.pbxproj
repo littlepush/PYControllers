@@ -16,6 +16,8 @@
 		E6E8B8D31A77F55700FDF235 /* PYResponderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8C91A77F55700FDF235 /* PYResponderView.m */; };
 		E6E8B8D41A77F55700FDF235 /* PYStaticLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8CB1A77F55700FDF235 /* PYStaticLayer.m */; };
 		E6E8B8D51A77F55700FDF235 /* PYView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8CD1A77F55700FDF235 /* PYView.m */; };
+		E6E8B93B1A78089E00FDF235 /* PYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B9381A78089E00FDF235 /* PYLabel.m */; };
+		E6E8B93C1A78089E00FDF235 /* PYLabelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B93A1A78089E00FDF235 /* PYLabelLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +53,10 @@
 		E6E8B8CB1A77F55700FDF235 /* PYStaticLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYStaticLayer.m; sourceTree = "<group>"; };
 		E6E8B8CC1A77F55700FDF235 /* PYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYView.h; sourceTree = "<group>"; };
 		E6E8B8CD1A77F55700FDF235 /* PYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYView.m; sourceTree = "<group>"; };
+		E6E8B9371A78089E00FDF235 /* PYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLabel.h; sourceTree = "<group>"; };
+		E6E8B9381A78089E00FDF235 /* PYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLabel.m; sourceTree = "<group>"; };
+		E6E8B9391A78089E00FDF235 /* PYLabelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLabelLayer.h; sourceTree = "<group>"; };
+		E6E8B93A1A78089E00FDF235 /* PYLabelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLabelLayer.m; sourceTree = "<group>"; };
 		FC5AC8CFB94AFD49E99BCBE3 /* libPods-PYControllers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PYControllers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -104,6 +110,10 @@
 		E6E8B8A51A77EE3F00FDF235 /* PYControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E6E8B9371A78089E00FDF235 /* PYLabel.h */,
+				E6E8B9381A78089E00FDF235 /* PYLabel.m */,
+				E6E8B9391A78089E00FDF235 /* PYLabelLayer.h */,
+				E6E8B93A1A78089E00FDF235 /* PYLabelLayer.m */,
 				E6E8B8BD1A77F55700FDF235 /* PYControllers.h */,
 				E6E8B8BE1A77F55700FDF235 /* PYHUDView.h */,
 				E6E8B8BF1A77F55700FDF235 /* PYHUDView.m */,
@@ -219,9 +229,11 @@
 				E6E8B8D31A77F55700FDF235 /* PYResponderView.m in Sources */,
 				E6E8B8D01A77F55700FDF235 /* PYInnerShadowLayer.m in Sources */,
 				E6E8B8CE1A77F55700FDF235 /* PYHUDView.m in Sources */,
+				E6E8B93B1A78089E00FDF235 /* PYLabel.m in Sources */,
 				E6E8B8D11A77F55700FDF235 /* PYLayer.m in Sources */,
 				E6E8B8D21A77F55700FDF235 /* PYResponderGestureRecognizer.m in Sources */,
 				E6E8B8D41A77F55700FDF235 /* PYStaticLayer.m in Sources */,
+				E6E8B93C1A78089E00FDF235 /* PYLabelLayer.m in Sources */,
 				E6E8B8CF1A77F55700FDF235 /* PYHUDView+Singleton.m in Sources */,
 				E6E8B8D51A77F55700FDF235 /* PYView.m in Sources */,
 			);

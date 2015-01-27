@@ -52,6 +52,8 @@
 #import "PYResponderView.h"
 
 #import "PYHUDView.h"
+#import "PYLabelLayer.h"
+#import "PYlabel.h"
 
 #endif
 
