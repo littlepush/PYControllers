@@ -151,7 +151,11 @@ static UIColor      *_gPYLabelColor = nil;
     [super layerJustBeenCreated];
     [self setMasksToBounds:YES];
     self.paddingLeft = 0.f;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > 60100 // 6.1
+    self.lineBreakMode = NSLineBreakByTruncatingTail;
+#else
     self.lineBreakMode = UILineBreakModeTailTruncation;
+#endif
 }
 
 - (void)layerJustBeenCopyed
@@ -159,7 +163,11 @@ static UIColor      *_gPYLabelColor = nil;
     [super layerJustBeenCopyed];
     [self setMasksToBounds:YES];
     self.paddingLeft = 0.f;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > 60100 // 6.1
+    self.lineBreakMode = NSLineBreakByTruncatingTail;
+#else
     self.lineBreakMode = UILineBreakModeTailTruncation;
+#endif
 }
 
 - (void)willMoveToSuperLayer:(CALayer *)layer
@@ -186,7 +194,11 @@ static UIColor      *_gPYLabelColor = nil;
 
     //[self.textColor setFill];
     CGRect _bounds = self.bounds;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > 70000 // 6.1
+    CGSize _textSize = [_text sizeWithAttributes:@{NSFontAttributeName:_textFont}];
+#else
     CGSize _textSize = [_text sizeWithFont:_textFont];
+#endif
     CGRect _textFrame = _bounds;
     _textFrame.origin.x += _paddingLeft;
     _textFrame.size.width -= (_paddingLeft + _paddingRight);
@@ -213,10 +225,24 @@ static UIColor      *_gPYLabelColor = nil;
         (ctx, _textShadowOffset, _textShadowRadius,
          _textShadowColor.CGColor);
         
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+        NSMutableParagraphStyle *_pgStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        // Set line break mode
+        _pgStyle.lineBreakMode = _lineBreakMode;
+        // Set text alignment
+        _pgStyle.alignment = _textAlignment;
+        [_text
+         drawInRect:_textFrame
+         withAttributes:@{
+                          NSFontAttributeName:_textFont,
+                          NSParagraphStyleAttributeName:_pgStyle
+                          }];
+#else
         [_text drawInRect:_textFrame
                  withFont:_textFont
             lineBreakMode:(NSLineBreakMode)_lineBreakMode
                 alignment:_textAlignment];
+#endif
     } else {
         NSMutableParagraphStyle *_style = [[NSMutableParagraphStyle alloc] init];
         [_style setAlignment:_textAlignment];
