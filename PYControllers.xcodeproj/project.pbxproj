@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25799FDABAFE8FA319995C48 /* libPods-PYControllers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5AC8CFB94AFD49E99BCBE3 /* libPods-PYControllers.a */; };
+		E6E8B8CE1A77F55700FDF235 /* PYHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8BF1A77F55700FDF235 /* PYHUDView.m */; };
+		E6E8B8CF1A77F55700FDF235 /* PYHUDView+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8C11A77F55700FDF235 /* PYHUDView+Singleton.m */; };
+		E6E8B8D01A77F55700FDF235 /* PYInnerShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8C31A77F55700FDF235 /* PYInnerShadowLayer.m */; };
+		E6E8B8D11A77F55700FDF235 /* PYLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8C51A77F55700FDF235 /* PYLayer.m */; };
+		E6E8B8D21A77F55700FDF235 /* PYResponderGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8C71A77F55700FDF235 /* PYResponderGestureRecognizer.m */; };
+		E6E8B8D31A77F55700FDF235 /* PYResponderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8C91A77F55700FDF235 /* PYResponderView.m */; };
+		E6E8B8D41A77F55700FDF235 /* PYStaticLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8CB1A77F55700FDF235 /* PYStaticLayer.m */; };
+		E6E8B8D51A77F55700FDF235 /* PYView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8CD1A77F55700FDF235 /* PYView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6E8B8A11A77EE3F00FDF235 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		18552FBEBA5A6992BEEB216F /* Pods-PYControllers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYControllers.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYControllers/Pods-PYControllers.release.xcconfig"; sourceTree = "<group>"; };
+		BEF803C0412081DB26C07963 /* Pods-PYControllers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYControllers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYControllers/Pods-PYControllers.debug.xcconfig"; sourceTree = "<group>"; };
+		E6E8B8A31A77EE3F00FDF235 /* libPYControllers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPYControllers.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6E8B8BD1A77F55700FDF235 /* PYControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYControllers.h; sourceTree = "<group>"; };
+		E6E8B8BE1A77F55700FDF235 /* PYHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYHUDView.h; sourceTree = "<group>"; };
+		E6E8B8BF1A77F55700FDF235 /* PYHUDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYHUDView.m; sourceTree = "<group>"; };
+		E6E8B8C01A77F55700FDF235 /* PYHUDView+Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PYHUDView+Singleton.h"; sourceTree = "<group>"; };
+		E6E8B8C11A77F55700FDF235 /* PYHUDView+Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PYHUDView+Singleton.m"; sourceTree = "<group>"; };
+		E6E8B8C21A77F55700FDF235 /* PYInnerShadowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYInnerShadowLayer.h; sourceTree = "<group>"; };
+		E6E8B8C31A77F55700FDF235 /* PYInnerShadowLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYInnerShadowLayer.m; sourceTree = "<group>"; };
+		E6E8B8C41A77F55700FDF235 /* PYLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLayer.h; sourceTree = "<group>"; };
+		E6E8B8C51A77F55700FDF235 /* PYLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLayer.m; sourceTree = "<group>"; };
+		E6E8B8C61A77F55700FDF235 /* PYResponderGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYResponderGestureRecognizer.h; sourceTree = "<group>"; };
+		E6E8B8C71A77F55700FDF235 /* PYResponderGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYResponderGestureRecognizer.m; sourceTree = "<group>"; };
+		E6E8B8C81A77F55700FDF235 /* PYResponderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYResponderView.h; sourceTree = "<group>"; };
+		E6E8B8C91A77F55700FDF235 /* PYResponderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYResponderView.m; sourceTree = "<group>"; };
+		E6E8B8CA1A77F55700FDF235 /* PYStaticLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYStaticLayer.h; sourceTree = "<group>"; };
+		E6E8B8CB1A77F55700FDF235 /* PYStaticLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYStaticLayer.m; sourceTree = "<group>"; };
+		E6E8B8CC1A77F55700FDF235 /* PYView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYView.h; sourceTree = "<group>"; };
+		E6E8B8CD1A77F55700FDF235 /* PYView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYView.m; sourceTree = "<group>"; };
+		FC5AC8CFB94AFD49E99BCBE3 /* libPods-PYControllers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PYControllers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6E8B8A01A77EE3F00FDF235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25799FDABAFE8FA319995C48 /* libPods-PYControllers.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E3ABAD000B51D85A487D546 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEF803C0412081DB26C07963 /* Pods-PYControllers.debug.xcconfig */,
+				18552FBEBA5A6992BEEB216F /* Pods-PYControllers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		869C2098FE8F1DD5E9F35112 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC5AC8CFB94AFD49E99BCBE3 /* libPods-PYControllers.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6E8B89A1A77EE3F00FDF235 = {
+			isa = PBXGroup;
+			children = (
+				E6E8B8A51A77EE3F00FDF235 /* PYControllers */,
+				E6E8B8A41A77EE3F00FDF235 /* Products */,
+				1E3ABAD000B51D85A487D546 /* Pods */,
+				869C2098FE8F1DD5E9F35112 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E6E8B8A41A77EE3F00FDF235 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6E8B8A31A77EE3F00FDF235 /* libPYControllers.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6E8B8A51A77EE3F00FDF235 /* PYControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6E8B8BD1A77F55700FDF235 /* PYControllers.h */,
+				E6E8B8BE1A77F55700FDF235 /* PYHUDView.h */,
+				E6E8B8BF1A77F55700FDF235 /* PYHUDView.m */,
+				E6E8B8C01A77F55700FDF235 /* PYHUDView+Singleton.h */,
+				E6E8B8C11A77F55700FDF235 /* PYHUDView+Singleton.m */,
+				E6E8B8C21A77F55700FDF235 /* PYInnerShadowLayer.h */,
+				E6E8B8C31A77F55700FDF235 /* PYInnerShadowLayer.m */,
+				E6E8B8C41A77F55700FDF235 /* PYLayer.h */,
+				E6E8B8C51A77F55700FDF235 /* PYLayer.m */,
+				E6E8B8C61A77F55700FDF235 /* PYResponderGestureRecognizer.h */,
+				E6E8B8C71A77F55700FDF235 /* PYResponderGestureRecognizer.m */,
+				E6E8B8C81A77F55700FDF235 /* PYResponderView.h */,
+				E6E8B8C91A77F55700FDF235 /* PYResponderView.m */,
+				E6E8B8CA1A77F55700FDF235 /* PYStaticLayer.h */,
+				E6E8B8CB1A77F55700FDF235 /* PYStaticLayer.m */,
+				E6E8B8CC1A77F55700FDF235 /* PYView.h */,
+				E6E8B8CD1A77F55700FDF235 /* PYView.m */,
+			);
+			path = PYControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6E8B8A21A77EE3F00FDF235 /* PYControllers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6E8B8B71A77EE3F00FDF235 /* Build configuration list for PBXNativeTarget "PYControllers" */;
+			buildPhases = (
+				04E6754F8992CAAEEF3C0CB7 /* Check Pods Manifest.lock */,
+				E6E8B89F1A77EE3F00FDF235 /* Sources */,
+				E6E8B8A01A77EE3F00FDF235 /* Frameworks */,
+				E6E8B8A11A77EE3F00FDF235 /* CopyFiles */,
+				3B0101044A31218403E1342E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PYControllers;
+			productName = PYControllers;
+			productReference = E6E8B8A31A77EE3F00FDF235 /* libPYControllers.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6E8B89B1A77EE3F00FDF235 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Push Lab";
+				TargetAttributes = {
+					E6E8B8A21A77EE3F00FDF235 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = E6E8B89E1A77EE3F00FDF235 /* Build configuration list for PBXProject "PYControllers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E6E8B89A1A77EE3F00FDF235;
+			productRefGroup = E6E8B8A41A77EE3F00FDF235 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6E8B8A21A77EE3F00FDF235 /* PYControllers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04E6754F8992CAAEEF3C0CB7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3B0101044A31218403E1342E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PYControllers/Pods-PYControllers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6E8B89F1A77EE3F00FDF235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E8B8D31A77F55700FDF235 /* PYResponderView.m in Sources */,
+				E6E8B8D01A77F55700FDF235 /* PYInnerShadowLayer.m in Sources */,
+				E6E8B8CE1A77F55700FDF235 /* PYHUDView.m in Sources */,
+				E6E8B8D11A77F55700FDF235 /* PYLayer.m in Sources */,
+				E6E8B8D21A77F55700FDF235 /* PYResponderGestureRecognizer.m in Sources */,
+				E6E8B8D41A77F55700FDF235 /* PYStaticLayer.m in Sources */,
+				E6E8B8CF1A77F55700FDF235 /* PYHUDView+Singleton.m in Sources */,
+				E6E8B8D51A77F55700FDF235 /* PYView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E6E8B8B51A77EE3F00FDF235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E6E8B8B61A77EE3F00FDF235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6E8B8B81A77EE3F00FDF235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEF803C0412081DB26C07963 /* Pods-PYControllers.debug.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E6E8B8B91A77EE3F00FDF235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18552FBEBA5A6992BEEB216F /* Pods-PYControllers.release.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6E8B89E1A77EE3F00FDF235 /* Build configuration list for PBXProject "PYControllers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6E8B8B51A77EE3F00FDF235 /* Debug */,
+				E6E8B8B61A77EE3F00FDF235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6E8B8B71A77EE3F00FDF235 /* Build configuration list for PBXNativeTarget "PYControllers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6E8B8B81A77EE3F00FDF235 /* Debug */,
+				E6E8B8B91A77EE3F00FDF235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E6E8B89B1A77EE3F00FDF235 /* Project object */;
+}
