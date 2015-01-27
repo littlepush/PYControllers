@@ -18,6 +18,7 @@
 		E6E8B8D51A77F55700FDF235 /* PYView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8CD1A77F55700FDF235 /* PYView.m */; };
 		E6E8B93B1A78089E00FDF235 /* PYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B9381A78089E00FDF235 /* PYLabel.m */; };
 		E6E8B93C1A78089E00FDF235 /* PYLabelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B93A1A78089E00FDF235 /* PYLabelLayer.m */; };
+		E6E8B9A81A78196200FDF235 /* PYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B9A71A78196200FDF235 /* PYButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,8 @@
 		E6E8B9381A78089E00FDF235 /* PYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLabel.m; sourceTree = "<group>"; };
 		E6E8B9391A78089E00FDF235 /* PYLabelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLabelLayer.h; sourceTree = "<group>"; };
 		E6E8B93A1A78089E00FDF235 /* PYLabelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLabelLayer.m; sourceTree = "<group>"; };
+		E6E8B9A61A78196200FDF235 /* PYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYButton.h; sourceTree = "<group>"; };
+		E6E8B9A71A78196200FDF235 /* PYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYButton.m; sourceTree = "<group>"; };
 		FC5AC8CFB94AFD49E99BCBE3 /* libPods-PYControllers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PYControllers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +113,8 @@
 		E6E8B8A51A77EE3F00FDF235 /* PYControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E6E8B9A61A78196200FDF235 /* PYButton.h */,
+				E6E8B9A71A78196200FDF235 /* PYButton.m */,
 				E6E8B9371A78089E00FDF235 /* PYLabel.h */,
 				E6E8B9381A78089E00FDF235 /* PYLabel.m */,
 				E6E8B9391A78089E00FDF235 /* PYLabelLayer.h */,
@@ -227,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E8B8D31A77F55700FDF235 /* PYResponderView.m in Sources */,
+				E6E8B9A81A78196200FDF235 /* PYButton.m in Sources */,
 				E6E8B8D01A77F55700FDF235 /* PYInnerShadowLayer.m in Sources */,
 				E6E8B8CE1A77F55700FDF235 /* PYHUDView.m in Sources */,
 				E6E8B93B1A78089E00FDF235 /* PYLabel.m in Sources */,

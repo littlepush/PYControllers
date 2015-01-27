@@ -1,9 +1,9 @@
 //
-//  PYControllers.h
-//  PYControllers
+//  PYButton.h
+//  PYUIKit
 //
-//  Created by ChenPush on 1/28/15.
-//  Copyright (c) 2015 Push Lab. All rights reserved.
+//  Created by Push Chen on 10/10/14.
+//  Copyright (c) 2014 Push Lab. All rights reserved.
 //
 
 /*
@@ -40,24 +40,13 @@
  ENJOY YOUR LIFE AND BE FAR AWAY FROM BUGS.
  */
 
-#ifndef _IPY_PYCONTROLLERS_H_
-#define _IPY_PYCONTROLLERS_H_
+#import <UIKit/UIKit.h>
 
-#import "PYLayer.h"
-#import "PYStaticLayer.h"
-#import "PYInnerShadowLayer.h"
+@interface PYButton : UIButton
 
-#import "PYView.h"
-#import "PYResponderGestureRecognizer.h"
-#import "PYResponderView.h"
+- (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
 
-#import "PYHUDView.h"
-#import "PYLabelLayer.h"
-#import "PYlabel.h"
-#import "PYButton.h"
-
-#endif
-
+@end
 
 // @littlepush
 // littlepush@gmail.com
