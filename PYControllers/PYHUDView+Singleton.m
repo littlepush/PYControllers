@@ -135,10 +135,22 @@ static PYHUDView                        *_gQTHudView;
         }
         if ( [_title length] > 0 ) {
             UIFont *_titleFont = [UIFont boldSystemFontOfSize:14];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000    // 7.0
+            CGSize _titleSize = [_title sizeWithAttributes:@{NSFontAttributeName:_titleFont}];
+#else
             CGSize _titleSize = [_title sizeWithFont:_titleFont];
+#endif
             if ( _titleSize.width > 120.f )  {
                 // max: half of the screen
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000    // 7.0
+                _titleSize = [_title boundingRectWithSize:CGSizeMake(120.f, 120.f)
+                                                  options:(NSStringDrawingUsesLineFragmentOrigin |
+                                                           NSStringDrawingTruncatesLastVisibleLine)
+                                               attributes:@{NSFontAttributeName:_titleFont}
+                                                  context:nil].size;
+#else
                 _titleSize = [_title sizeWithFont:_titleFont constrainedToSize:CGSizeMake(120.f, 120.f)];
+#endif
             };
             _frameSize = _titleSize;
             
@@ -160,12 +172,24 @@ static PYHUDView                        *_gQTHudView;
         CGSize _msgSize = CGSizeMake(0, 0);
         if ( [_message length] > 0 ) {
             UIFont *_messageFont = [UIFont systemFontOfSize:12];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000    // 7.0
+            _msgSize = [_message sizeWithAttributes:@{NSFontAttributeName:_messageFont}];
+#else
             _msgSize = [_message sizeWithFont:_messageFont];
+#endif
             if ( _msgSize.width > 160 ) {
                 // no more than 300
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000    // 7.0
+                _msgSize = [_message boundingRectWithSize:CGSizeMake(160, (_msgSize.width / 160 + 1) * _msgSize.height)
+                                                  options:(NSStringDrawingUsesLineFragmentOrigin |
+                                                           NSStringDrawingTruncatesLastVisibleLine)
+                                               attributes:@{NSFontAttributeName:_messageFont}
+                                                  context:nil].size;
+#else
                 _msgSize = [_message sizeWithFont:_messageFont
                                 constrainedToSize:CGSizeMake
                             (160, (_msgSize.width / 160 + 1) * _msgSize.height)];
+#endif
             }
             _contentSize.width = MAX(_contentSize.width, _msgSize.width);
             if ( _headView != nil )
