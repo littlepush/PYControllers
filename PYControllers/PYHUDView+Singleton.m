@@ -134,36 +134,25 @@ static PYHUDView                        *_gQTHudView;
             _headView = _indicatorView;
         }
         if ( [_title length] > 0 ) {
-            UIFont *_titleFont = [UIFont boldSystemFontOfSize:14];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000    // 7.0
-            CGSize _titleSize = [_title sizeWithAttributes:@{NSFontAttributeName:_titleFont}];
+            CGSize _titleSize = [_title sizeWithAttributes:@{NSFontAttributeName:_titleLabel.font}];
 #else
-            CGSize _titleSize = [_title sizeWithFont:_titleFont];
+            CGSize _titleSize = [_title sizeWithFont:_titleLabel.font];
 #endif
-            if ( _titleSize.width > 120.f )  {
+            if ( _titleSize.width > _maxWidth )  {
                 // max: half of the screen
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000    // 7.0
-                _titleSize = [_title boundingRectWithSize:CGSizeMake(120.f, 120.f)
+                _titleSize = [_title boundingRectWithSize:CGSizeMake(_maxWidth, 120.f)
                                                   options:(NSStringDrawingUsesLineFragmentOrigin |
                                                            NSStringDrawingTruncatesLastVisibleLine)
-                                               attributes:@{NSFontAttributeName:_titleFont}
+                                               attributes:@{NSFontAttributeName:_titleLabel.font}
                                                   context:nil].size;
 #else
-                _titleSize = [_title sizeWithFont:_titleFont constrainedToSize:CGSizeMake(120.f, 120.f)];
+                _titleSize = [_title sizeWithFont:_titleLabel.font constrainedToSize:CGSizeMake(_maxWidth, 120.f)];
 #endif
             };
             _frameSize = _titleSize;
             
-            // Init the title label
-            if ( _titleLabel == nil ) {
-                _titleLabel = [[UILabel alloc] init];
-                [_titleLabel setFont:_titleFont];
-                [_titleLabel setTextColor:[UIColor whiteColor]];
-                [_titleLabel setTextAlignment:NSTextAlignmentCenter];
-                [_titleLabel setBackgroundColor:[UIColor clearColor]];
-                // make the title label support multiple lines
-                [_titleLabel setNumberOfLines:50];
-            }
             [_titleLabel setText:_title];
             [self addSubview:_titleLabel];
             _headView = _titleLabel;
@@ -171,24 +160,23 @@ static PYHUDView                        *_gQTHudView;
         CGSize _contentSize = _frameSize;
         CGSize _msgSize = CGSizeMake(0, 0);
         if ( [_message length] > 0 ) {
-            UIFont *_messageFont = [UIFont systemFontOfSize:12];
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000    // 7.0
-            _msgSize = [_message sizeWithAttributes:@{NSFontAttributeName:_messageFont}];
+            _msgSize = [_message sizeWithAttributes:@{NSFontAttributeName:_messageLabel.font}];
 #else
-            _msgSize = [_message sizeWithFont:_messageFont];
+            _msgSize = [_message sizeWithFont:_messageLabel.font];
 #endif
-            if ( _msgSize.width > 160 ) {
+            if ( _msgSize.width > _maxWidth ) {
                 // no more than 300
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000    // 7.0
-                _msgSize = [_message boundingRectWithSize:CGSizeMake(160, (_msgSize.width / 160 + 1) * _msgSize.height)
+                _msgSize = [_message boundingRectWithSize:CGSizeMake(_maxWidth, (_msgSize.width / _maxWidth + 1) * _msgSize.height)
                                                   options:(NSStringDrawingUsesLineFragmentOrigin |
                                                            NSStringDrawingTruncatesLastVisibleLine)
-                                               attributes:@{NSFontAttributeName:_messageFont}
+                                               attributes:@{NSFontAttributeName:_messageLabel.font}
                                                   context:nil].size;
 #else
-                _msgSize = [_message sizeWithFont:_messageFont
+                _msgSize = [_message sizeWithFont:_messageLabel.font
                                 constrainedToSize:CGSizeMake
-                            (160, (_msgSize.width / 160 + 1) * _msgSize.height)];
+                            (_maxWidth, (_msgSize.width / _maxWidth + 1) * _msgSize.height)];
 #endif
             }
             _contentSize.width = MAX(_contentSize.width, _msgSize.width);
@@ -196,15 +184,6 @@ static PYHUDView                        *_gQTHudView;
                 _contentSize.height += 20.f;    // padding between head and body
             _contentSize.height += _msgSize.height;
             
-            // init the message label
-            if ( _messageLabel == nil ) {
-                _messageLabel = [[UILabel alloc] init];
-                [_messageLabel setFont:_messageFont];
-                [_messageLabel setTextColor:[UIColor whiteColor]];
-                [_messageLabel setTextAlignment:NSTextAlignmentCenter];
-                [_messageLabel setBackgroundColor:[UIColor clearColor]];
-                [_messageLabel setNumberOfLines:50];
-            }
             [_messageLabel setText:_message];
             [self addSubview:_messageLabel];
         }
@@ -238,7 +217,7 @@ static PYHUDView                        *_gQTHudView;
 
 - (CGRect)_calculateHUDFrame:(CGSize)contentSize
 {
-    CGFloat _width = contentSize.width < 120.f ? 120.f : contentSize.width;
+    CGFloat _width = contentSize.width < _maxWidth ? _maxWidth : contentSize.width;
     CGFloat _height = (contentSize.height >= _width) ? contentSize.height :
     (
      _width / contentSize.height >= (4 / 3) ? (_width / 4 * 3) : contentSize.height

@@ -3,8 +3,8 @@
 
 target 'PYControllers' do
 
-pod "PYCore", "~> 0.9"
-pod "PYUIKit", "~> 0.9"
+pod "PYCore"
+pod "PYUIKit"
 
 end
 

@@ -56,6 +56,8 @@
     NSString                            *_message;
     BOOL                                _isShowIndicator;
     
+    CGFloat                             _maxWidth;
+    
     // Subviews
     PYView                              *_contentView;
     UIView                              *_customizedView;
@@ -75,6 +77,12 @@
 + (void)setCornerRadius:(CGFloat)radius;
 + (void)setEnableDropShadow:(BOOL)isEnable;
 + (CGFloat)displayAnimationDuration;
++ (void)setBackgroundColor:(UIColor *)color;
++ (void)setTitleFont:(UIFont *)font;
++ (void)setMessageFont:(UIFont *)font;
++ (void)setTitleTextColor:(UIColor *)color;
++ (void)setMessageTextColor:(UIColor *)color;
++ (void)setMaxContentWidth:(CGFloat)width;
 
 // Actions for developers to use
 /* Hide the hud view directly */

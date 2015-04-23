@@ -61,6 +61,24 @@
         UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [_contentView setFrame:self.bounds];
     [self addSubview:_contentView];
+    
+    _maxWidth = 160.f;
+    
+    // Init the title label
+    _titleLabel = [[UILabel alloc] init];
+    [_titleLabel setFont:[UIFont systemFontOfSize:17.f]];
+    [_titleLabel setTextColor:[UIColor whiteColor]];
+    [_titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [_titleLabel setBackgroundColor:[UIColor clearColor]];
+    // make the title label support multiple lines
+    [_titleLabel setNumberOfLines:0];
+
+    _messageLabel = [[UILabel alloc] init];
+    [_messageLabel setFont:[UIFont systemFontOfSize:14.f]];
+    [_messageLabel setTextColor:[UIColor whiteColor]];
+    [_messageLabel setTextAlignment:NSTextAlignmentCenter];
+    [_messageLabel setBackgroundColor:[UIColor clearColor]];
+    [_messageLabel setNumberOfLines:0];
 }
 // Settings
 + (CGFloat)displayAnimationDuration
@@ -105,6 +123,43 @@
         }
     }
 }
++ (void)setBackgroundColor:(UIColor *)color
+{
+    @synchronized(self) {
+        [[PYHUDView sharedHUDView]->_contentView setBackgroundColor:color];
+    }
+}
++ (void)setTitleFont:(UIFont *)font
+{
+    @synchronized(self) {
+        [[PYHUDView sharedHUDView]->_titleLabel setFont:font];
+    }
+}
++ (void)setMessageFont:(UIFont *)font
+{
+    @synchronized(self) {
+        [[PYHUDView sharedHUDView]->_messageLabel setFont:font];
+    }
+}
++ (void)setTitleTextColor:(UIColor *)color
+{
+    @synchronized(self) {
+        [[PYHUDView sharedHUDView]->_titleLabel setTextColor:color];
+    }
+}
++ (void)setMessageTextColor:(UIColor *)color
+{
+    @synchronized(self) {
+        [[PYHUDView sharedHUDView]->_messageLabel setTextColor:color];
+    }
+}
++ (void)setMaxContentWidth:(CGFloat)width
+{
+    @synchronized(self) {
+        [PYHUDView sharedHUDView]->_maxWidth = width;
+    }
+}
+
 
 // Actions
 + (void)hideHUDView
