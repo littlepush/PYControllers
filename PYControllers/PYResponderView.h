@@ -44,21 +44,6 @@
 #import "PYResponderGestureRecognizer.h"
 
 @interface PYResponderView : PYView <PYResponderGestureRecognizerDelegate>
-{
-    @private
-    // Action Status
-    NSSet                               *_beginTouchSet;
-    UIEvent                             *_beginEvent;
-    
-    @protected
-    // Gesture
-    PYResponderGestureRecognizer        *_responderGesture;
-    
-    @private
-    // Call back
-    NSMutableArray                      *_eventTargetsActions[10];
-    BOOL                                _nextResponderReceivedBeginEvent;
-}
 
 // Set the responder's supported event's restraint.
 // the responder view will detect the event and try to find the target/action

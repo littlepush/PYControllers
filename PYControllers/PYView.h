@@ -45,10 +45,6 @@
 
 // The PYView object.
 @interface PYView : UIView
-{
-    PYInnerShadowLayer                              *_shadowLayer;
-    BOOL                                            _hasInvokeInit;
-}
 
 // Inner Shadow Setting
 @property (nonatomic, strong)   UIColor             *innerShadowColor;
@@ -59,6 +55,7 @@
 
 // Make PYView to support debug
 + (void)setDebugEnabled:(BOOL)enableDebug;
++ (BOOL)isDebugEnabled;
 
 // Override the layer property.
 @property (nonatomic, readonly) PYLayer             *layer;

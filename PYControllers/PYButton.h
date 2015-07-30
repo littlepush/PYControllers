@@ -44,7 +44,15 @@
 
 @interface PYButton : UIButton
 
+/*!
+ @breif Set different background color for specified control state.
+ */
 - (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
+
+/*!
+ @brief Get the specified state's backgrond color
+ */
+- (UIColor *)backgroundColorForState:(UIControlState)state;
 
 @end
 

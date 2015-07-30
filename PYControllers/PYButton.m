@@ -50,6 +50,11 @@
 
 @implementation PYButton
 
+- (UIColor *)backgroundColorForState:(UIControlState)state
+{
+    if ( _cachedBackgroundColor[state] == nil ) return self.backgroundColor;
+    return _cachedBackgroundColor[state];
+}
 - (void)initializeTargetBind
 {
     [self addTarget:self action:@selector(actionOnTouchDown:)

@@ -43,6 +43,18 @@
 #import "PYInnerShadowLayer.h"
 #import <PYCore/PYCore.h>
 
+@interface PYInnerShadowLayer ()
+{
+    PYPadding                           _shadowPadding;
+    UIColor                             *_innerShadowColor;
+    
+    // Cached shadow path.
+    CGFloat                             _maxPadding;
+    UIBezierPath                        *_innerShadowPath;
+    UIBezierPath                        *_outterBorderPath;
+}
+@end
+
 @implementation PYInnerShadowLayer
 
 - (void)dealloc

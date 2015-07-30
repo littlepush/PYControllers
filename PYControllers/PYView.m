@@ -44,12 +44,23 @@
 #import "PYLayer.h"
 #import <PYCore/PYCore.h>
 
+@interface PYView ()
+{
+    PYInnerShadowLayer                              *_shadowLayer;
+    BOOL                                            _hasInvokeInit;
+}
+@end
+
 @implementation PYView
 
 // Make PYView to support debug
 + (void)setDebugEnabled:(BOOL)enableDebug
 {
     [PYLayer setDebugEnabled:enableDebug];
+}
++ (BOOL)isDebugEnabled
+{
+    return [PYLayer isDebugEnabled];
 }
 
 @dynamic layer;

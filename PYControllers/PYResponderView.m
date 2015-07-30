@@ -44,6 +44,24 @@
 #include <math.h>
 #import <PYCore/PYCore.h>
 
+@interface PYResponderView ()
+{
+@private
+    // Action Status
+    NSSet                               *_beginTouchSet;
+    UIEvent                             *_beginEvent;
+    
+@protected
+    // Gesture
+    PYResponderGestureRecognizer        *_responderGesture;
+    
+@private
+    // Call back
+    NSMutableArray                      *_eventTargetsActions[10];
+    BOOL                                _nextResponderReceivedBeginEvent;
+}
+@end
+
 @interface PYResponderView (Internal)
 
 // Responder Gesture Handler

@@ -129,30 +129,6 @@ typedef NS_OPTIONS(int32_t, PYResponderRestraint) {
 @end
 
 @interface PYResponderGestureRecognizer : UIGestureRecognizer
-{
-    PYResponderEvent                    _possibleAction;
-
-    CGPoint                             _firstTouchPoint;
-    CGPoint                             _lastMovePoint;
-    
-    CGFloat                             _pinchDistance;
-    CGFloat                             _rotateArc;
-
-    unsigned int                        _tapCount;
-    PYStopWatch                         *_tapTimestamp;
-    NSTimer                             *_lagEventTimer;
-    PYStopWatch                         *_speedTicker;
-    CGPoint                             _movingSpeed;
-    CGSize                              _lastMoveDistrance;
-    int                                 _swipeSide;
-    
-    // Actions
-    PYResponderEvent                    _responderAction;
-    PYResponderRestraint                _responderRestraint;
-    
-    // Event
-    PYViewEvent                         *_eventInfo;
-}
 
 // The delegate override the super defination.
 @property (nonatomic, assign)   IBOutlet id<PYResponderGestureRecognizerDelegate>    delegate;

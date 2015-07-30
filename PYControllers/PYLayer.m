@@ -47,6 +47,13 @@
 
 static BOOL _gEnableDebug = NO;
 
+@interface PYLayer ()
+{
+    // Add tag info for layer.
+    int                             _layerTag;
+}
+@end
+
 @implementation PYLayer
 
 + (void)setDebugEnabled:(BOOL)enableDebug

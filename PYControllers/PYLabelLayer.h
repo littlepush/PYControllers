@@ -44,26 +44,6 @@
 #import "PYStaticLayer.h"
 
 @interface PYLabelLayer : PYStaticLayer
-{
-    NSString                                        *_text;
-    UIColor                                         *_textColor;
-    UIFont                                          *_textFont;
-    CGSize                                          _textShadowOffset;
-    UIColor                                         *_textShadowColor;
-    CGFloat                                         _textShadowRadius;
-    CGFloat                                         _textBorderWidth;
-    UIColor                                         *_textBorderColor;
-    
-    BOOL                                            _multipleLine;
-    NSTextAlignment                                 _textAlignment;
-#if __IPHONE_OS_VERSION_MAX_ALLOWED > 60100 // 6.1
-    NSLineBreakMode                                 _lineBreakMode;
-#else
-    UILineBreakMode                                 _lineBreakMode;
-#endif
-    CGFloat                                         _paddingLeft;
-    CGFloat                                         _paddingRight;
-}
 
 // Properties like UILabel.
 // But all this things will be used to draw text directly in layer.
