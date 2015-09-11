@@ -133,8 +133,18 @@
 
 - (void)actionOnTouchUp:(id)sender
 {
-    if ( _cachedBackgroundColor[UIControlStateNormal] != nil ) {
-        [super setBackgroundColor:_cachedBackgroundColor[UIControlStateNormal]];
+    if ( self.enabled && self.selected ) {
+        if ( _cachedBackgroundColor[UIControlStateSelected] != nil ) {
+            [super setBackgroundColor:_cachedBackgroundColor[UIControlStateSelected]];
+        }
+    } else if ( self.enabled == NO ) {
+        if ( _cachedBackgroundColor[UIControlStateDisabled] != nil ) {
+            [super setBackgroundColor:_cachedBackgroundColor[UIControlStateDisabled]];
+        }
+    } else {
+        if ( _cachedBackgroundColor[UIControlStateNormal] != nil ) {
+            [super setBackgroundColor:_cachedBackgroundColor[UIControlStateNormal]];
+        }
     }
 }
 
