@@ -54,6 +54,16 @@
  */
 - (UIColor *)backgroundColorForState:(UIControlState)state;
 
+/*!
+ @brief Set different font for specified control state
+ */
+- (void)setTitleFont:(UIFont *)font forState:(UIControlState)state;
+
+/*!
+ @brief Get the specified state's title font
+ */
+- (UIFont *)titleFontForState:(UIControlState)state;
+
 @end
 
 // @littlepush

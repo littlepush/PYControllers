@@ -45,6 +45,7 @@
 @interface PYButton ()
 {
     UIColor *_cachedBackgroundColor[5];
+    UIFont *_cachedFont[5];
 }
 @end
 
@@ -55,6 +56,13 @@
     if ( _cachedBackgroundColor[state] == nil ) return self.backgroundColor;
     return _cachedBackgroundColor[state];
 }
+
+- (UIFont *)titleFontForState:(UIControlState)state
+{
+    if ( _cachedFont[state] == nil ) return self.titleLabel.font;
+    return _cachedFont[state];
+}
+
 - (void)initializeTargetBind
 {
     [self addTarget:self action:@selector(actionOnTouchDown:)
@@ -111,6 +119,14 @@
     }
 }
 
+- (void)setTitleFont:(UIFont *)font forState:(UIControlState)state
+{
+    _cachedFont[state] = font;
+    if ( state == self.state ) {
+        [self.titleLabel setFont:font];
+    }
+}
+
 - (void)setSelected:(BOOL)selected
 {
     [super setSelected:selected];
@@ -118,9 +134,15 @@
         if ( _cachedBackgroundColor[UIControlStateSelected] != nil ) {
             [super setBackgroundColor:_cachedBackgroundColor[UIControlStateSelected]];
         }
+        if ( _cachedFont[UIControlStateSelected] != nil ) {
+            [self.titleLabel setFont:_cachedFont[UIControlStateSelected]];
+        }
     } else {
         if ( _cachedBackgroundColor[UIControlStateNormal] != nil ) {
             [super setBackgroundColor:_cachedBackgroundColor[UIControlStateNormal]];
+        }
+        if ( _cachedFont[UIControlStateSelected] != nil ) {
+            [self.titleLabel setFont:_cachedFont[UIControlStateNormal]];
         }
     }
 }
@@ -128,6 +150,9 @@
 {
     if ( _cachedBackgroundColor[UIControlStateHighlighted] != nil ) {
         [super setBackgroundColor:_cachedBackgroundColor[UIControlStateHighlighted]];
+    }
+    if ( _cachedFont[UIControlStateHighlighted] != nil ) {
+        [self.titleLabel setFont:_cachedFont[UIControlStateHighlighted]];
     }
 }
 
@@ -137,13 +162,22 @@
         if ( _cachedBackgroundColor[UIControlStateSelected] != nil ) {
             [super setBackgroundColor:_cachedBackgroundColor[UIControlStateSelected]];
         }
+        if ( _cachedFont[UIControlStateSelected] != nil ) {
+            [self.titleLabel setFont:_cachedFont[UIControlStateSelected]];
+        }
     } else if ( self.enabled == NO ) {
         if ( _cachedBackgroundColor[UIControlStateDisabled] != nil ) {
             [super setBackgroundColor:_cachedBackgroundColor[UIControlStateDisabled]];
         }
+        if ( _cachedFont[UIControlStateDisabled] != nil ) {
+            [self.titleLabel setFont:_cachedFont[UIControlStateDisabled]];
+        }
     } else {
         if ( _cachedBackgroundColor[UIControlStateNormal] != nil ) {
             [super setBackgroundColor:_cachedBackgroundColor[UIControlStateNormal]];
+        }
+        if ( _cachedFont[UIControlStateNormal] != nil ) {
+            [self.titleLabel setFont:_cachedFont[UIControlStateNormal]];
         }
     }
 }
