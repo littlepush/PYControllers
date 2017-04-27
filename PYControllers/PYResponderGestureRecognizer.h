@@ -42,7 +42,7 @@
 
 #import <UIKit/UIKit.h>
 #import <UIKit/UIGestureRecognizerSubclass.h>
-#import <PYCore/PYStopWatch.h>
+#import <PYCore/PYCore.h>
 
 typedef NS_OPTIONS(int32_t, PYResponderEvent) {
     PYResponderEventTap                 = 0x0001,
