@@ -41,8 +41,8 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <PYUIKit/PYUIKit.h>
 #import "PYStaticLayer.h"
-#import "PYRectangleCalc.h"
 
 @interface PYInnerShadowLayer : PYStaticLayer
 
