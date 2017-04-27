@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25799FDABAFE8FA319995C48 /* libPods-PYControllers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5AC8CFB94AFD49E99BCBE3 /* libPods-PYControllers.a */; };
+		9672170BB02933F078164871 /* libPods-PYControllers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E3F4DE899CC8D34CDB24C8E /* libPods-PYControllers.a */; };
+		A8ABE9068AEEF6FB3C1C575C /* libPods-PYControllersTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 734A17A8538AA118D7F35B4B /* libPods-PYControllersTest.a */; };
+		E66A097F1EB210920065E286 /* PYControllersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E66A097E1EB210920065E286 /* PYControllersTest.m */; };
+		E66A09811EB210920065E286 /* libPYControllers.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E8B8A31A77EE3F00FDF235 /* libPYControllers.a */; };
 		E6E8B8CE1A77F55700FDF235 /* PYHUDView.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8BF1A77F55700FDF235 /* PYHUDView.m */; };
 		E6E8B8CF1A77F55700FDF235 /* PYHUDView+Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8C11A77F55700FDF235 /* PYHUDView+Singleton.m */; };
 		E6E8B8D01A77F55700FDF235 /* PYInnerShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B8C31A77F55700FDF235 /* PYInnerShadowLayer.m */; };
@@ -20,6 +23,16 @@
 		E6E8B93C1A78089E00FDF235 /* PYLabelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B93A1A78089E00FDF235 /* PYLabelLayer.m */; };
 		E6E8B9A81A78196200FDF235 /* PYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E8B9A71A78196200FDF235 /* PYButton.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E66A09821EB210920065E286 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6E8B89B1A77EE3F00FDF235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6E8B8A21A77EE3F00FDF235;
+			remoteInfo = PYControllers;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E6E8B8A11A77EE3F00FDF235 /* CopyFiles */ = {
@@ -34,8 +47,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		18552FBEBA5A6992BEEB216F /* Pods-PYControllers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYControllers.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYControllers/Pods-PYControllers.release.xcconfig"; sourceTree = "<group>"; };
-		BEF803C0412081DB26C07963 /* Pods-PYControllers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYControllers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYControllers/Pods-PYControllers.debug.xcconfig"; sourceTree = "<group>"; };
+		0E3F4DE899CC8D34CDB24C8E /* libPods-PYControllers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PYControllers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		282515C10C206B9CE3F15F7B /* Pods-PYControllers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYControllers.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYControllers/Pods-PYControllers.release.xcconfig"; sourceTree = "<group>"; };
+		4B2938B793E4CE1C64ACEBD0 /* Pods-PYControllers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYControllers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYControllers/Pods-PYControllers.debug.xcconfig"; sourceTree = "<group>"; };
+		734A17A8538AA118D7F35B4B /* libPods-PYControllersTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PYControllersTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C525B5302278D8FCEB10CDA5 /* Pods-PYControllersTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYControllersTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-PYControllersTest/Pods-PYControllersTest.release.xcconfig"; sourceTree = "<group>"; };
+		E66A097C1EB210920065E286 /* PYControllersTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PYControllersTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E66A097E1EB210920065E286 /* PYControllersTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYControllersTest.m; sourceTree = "<group>"; };
+		E66A09801EB210920065E286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6E8B8A31A77EE3F00FDF235 /* libPYControllers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPYControllers.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E8B8BD1A77F55700FDF235 /* PYControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYControllers.h; sourceTree = "<group>"; };
 		E6E8B8BE1A77F55700FDF235 /* PYHUDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYHUDView.h; sourceTree = "<group>"; };
@@ -60,45 +79,67 @@
 		E6E8B93A1A78089E00FDF235 /* PYLabelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLabelLayer.m; sourceTree = "<group>"; };
 		E6E8B9A61A78196200FDF235 /* PYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYButton.h; sourceTree = "<group>"; };
 		E6E8B9A71A78196200FDF235 /* PYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYButton.m; sourceTree = "<group>"; };
-		FC5AC8CFB94AFD49E99BCBE3 /* libPods-PYControllers.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PYControllers.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F31B26296243D25A1D8957DA /* Pods-PYControllersTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYControllersTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYControllersTest/Pods-PYControllersTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E66A09791EB210920065E286 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66A09811EB210920065E286 /* libPYControllers.a in Frameworks */,
+				A8ABE9068AEEF6FB3C1C575C /* libPods-PYControllersTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6E8B8A01A77EE3F00FDF235 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25799FDABAFE8FA319995C48 /* libPods-PYControllers.a in Frameworks */,
+				9672170BB02933F078164871 /* libPods-PYControllers.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E3ABAD000B51D85A487D546 /* Pods */ = {
+		3B07572BC4FFB377E9FEA26D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BEF803C0412081DB26C07963 /* Pods-PYControllers.debug.xcconfig */,
-				18552FBEBA5A6992BEEB216F /* Pods-PYControllers.release.xcconfig */,
+				4B2938B793E4CE1C64ACEBD0 /* Pods-PYControllers.debug.xcconfig */,
+				282515C10C206B9CE3F15F7B /* Pods-PYControllers.release.xcconfig */,
+				F31B26296243D25A1D8957DA /* Pods-PYControllersTest.debug.xcconfig */,
+				C525B5302278D8FCEB10CDA5 /* Pods-PYControllersTest.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		869C2098FE8F1DD5E9F35112 /* Frameworks */ = {
+		5D599C7BA23B04CB3CFF8700 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FC5AC8CFB94AFD49E99BCBE3 /* libPods-PYControllers.a */,
+				0E3F4DE899CC8D34CDB24C8E /* libPods-PYControllers.a */,
+				734A17A8538AA118D7F35B4B /* libPods-PYControllersTest.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E66A097D1EB210920065E286 /* PYControllersTest */ = {
+			isa = PBXGroup;
+			children = (
+				E66A097E1EB210920065E286 /* PYControllersTest.m */,
+				E66A09801EB210920065E286 /* Info.plist */,
+			);
+			path = PYControllersTest;
 			sourceTree = "<group>";
 		};
 		E6E8B89A1A77EE3F00FDF235 = {
 			isa = PBXGroup;
 			children = (
 				E6E8B8A51A77EE3F00FDF235 /* PYControllers */,
+				E66A097D1EB210920065E286 /* PYControllersTest */,
 				E6E8B8A41A77EE3F00FDF235 /* Products */,
-				1E3ABAD000B51D85A487D546 /* Pods */,
-				869C2098FE8F1DD5E9F35112 /* Frameworks */,
+				3B07572BC4FFB377E9FEA26D /* Pods */,
+				5D599C7BA23B04CB3CFF8700 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				E6E8B8A31A77EE3F00FDF235 /* libPYControllers.a */,
+				E66A097C1EB210920065E286 /* PYControllersTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,15 +185,36 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E66A097B1EB210920065E286 /* PYControllersTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E66A09861EB210920065E286 /* Build configuration list for PBXNativeTarget "PYControllersTest" */;
+			buildPhases = (
+				DA417C70A0403E7F9694743A /* [CP] Check Pods Manifest.lock */,
+				E66A09781EB210920065E286 /* Sources */,
+				E66A09791EB210920065E286 /* Frameworks */,
+				E66A097A1EB210920065E286 /* Resources */,
+				5FDE691F53EA3B10C8E540EA /* [CP] Embed Pods Frameworks */,
+				BFC410A83C31F30D4FC3A9D3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E66A09831EB210920065E286 /* PBXTargetDependency */,
+			);
+			name = PYControllersTest;
+			productName = PYControllersTest;
+			productReference = E66A097C1EB210920065E286 /* PYControllersTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E6E8B8A21A77EE3F00FDF235 /* PYControllers */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6E8B8B71A77EE3F00FDF235 /* Build configuration list for PBXNativeTarget "PYControllers" */;
 			buildPhases = (
-				04E6754F8992CAAEEF3C0CB7 /* Check Pods Manifest.lock */,
+				C83750469179CDD573BDA208 /* [CP] Check Pods Manifest.lock */,
 				E6E8B89F1A77EE3F00FDF235 /* Sources */,
 				E6E8B8A01A77EE3F00FDF235 /* Frameworks */,
 				E6E8B8A11A77EE3F00FDF235 /* CopyFiles */,
-				3B0101044A31218403E1342E /* Copy Pods Resources */,
+				E7A91A17EA8A781693CA7EEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,9 +231,14 @@
 		E6E8B89B1A77EE3F00FDF235 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Push Lab";
 				TargetAttributes = {
+					E66A097B1EB210920065E286 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = VT7263HWQT;
+						ProvisioningStyle = Automatic;
+					};
 					E6E8B8A21A77EE3F00FDF235 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -189,34 +257,90 @@
 			projectRoot = "";
 			targets = (
 				E6E8B8A21A77EE3F00FDF235 /* PYControllers */,
+				E66A097B1EB210920065E286 /* PYControllersTest */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		E66A097A1EB210920065E286 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
-		04E6754F8992CAAEEF3C0CB7 /* Check Pods Manifest.lock */ = {
+		5FDE691F53EA3B10C8E540EA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PYControllersTest/Pods-PYControllersTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3B0101044A31218403E1342E /* Copy Pods Resources */ = {
+		BFC410A83C31F30D4FC3A9D3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PYControllersTest/Pods-PYControllersTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C83750469179CDD573BDA208 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA417C70A0403E7F9694743A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E7A91A17EA8A781693CA7EEB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +351,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E66A09781EB210920065E286 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66A097F1EB210920065E286 /* PYControllersTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6E8B89F1A77EE3F00FDF235 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,7 +379,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E66A09831EB210920065E286 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6E8B8A21A77EE3F00FDF235 /* PYControllers */;
+			targetProxy = E66A09821EB210920065E286 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E66A09841EB210920065E286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F31B26296243D25A1D8957DA /* Pods-PYControllersTest.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = VT7263HWQT;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PYControllersTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushlab.PYControllersTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E66A09851EB210920065E286 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C525B5302278D8FCEB10CDA5 /* Pods-PYControllersTest.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = VT7263HWQT;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = PYControllersTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushlab.PYControllersTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		E6E8B8B51A77EE3F00FDF235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -261,14 +445,18 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -281,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -301,21 +489,24 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -324,7 +515,7 @@
 		};
 		E6E8B8B81A77EE3F00FDF235 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEF803C0412081DB26C07963 /* Pods-PYControllers.debug.xcconfig */;
+			baseConfigurationReference = 4B2938B793E4CE1C64ACEBD0 /* Pods-PYControllers.debug.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -334,7 +525,7 @@
 		};
 		E6E8B8B91A77EE3F00FDF235 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 18552FBEBA5A6992BEEB216F /* Pods-PYControllers.release.xcconfig */;
+			baseConfigurationReference = 282515C10C206B9CE3F15F7B /* Pods-PYControllers.release.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -345,6 +536,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E66A09861EB210920065E286 /* Build configuration list for PBXNativeTarget "PYControllersTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E66A09841EB210920065E286 /* Debug */,
+				E66A09851EB210920065E286 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E6E8B89E1A77EE3F00FDF235 /* Build configuration list for PBXProject "PYControllers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

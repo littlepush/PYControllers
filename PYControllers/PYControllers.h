@@ -53,7 +53,7 @@
 
 #import "PYHUDView.h"
 #import "PYLabelLayer.h"
-#import "PYlabel.h"
+#import "PYLabel.h"
 #import "PYButton.h"
 
 #endif
