@@ -66,6 +66,8 @@ static UIColor      *_gPYLabelColor = nil;
 #endif
     CGFloat                                         _paddingLeft;
     CGFloat                                         _paddingRight;
+    CGFloat                                         _paddingTop;
+    CGFloat                                         _paddingBottom;
 }
 @end
 
@@ -147,6 +149,8 @@ static UIColor      *_gPYLabelColor = nil;
 @synthesize multipleLine = _multipleLine;
 @synthesize paddingLeft = _paddingLeft;
 @synthesize paddingRight = _paddingRight;
+@synthesize paddingTop = _paddingTop;
+@synthesize paddingBottom = _paddingBottom;
 - (void)setTextAlignment:(NSTextAlignment)alignment
 {
     _textAlignment = alignment;
@@ -186,6 +190,31 @@ static UIColor      *_gPYLabelColor = nil;
         [self setNeedsDisplay];
     }
 }
+- (void)setPaddingTop:(CGFloat)padding
+{
+    _paddingTop = padding;
+    if ( self.superlayer ) {
+        [self setNeedsDisplay];
+    }
+}
+- (void)setPaddingBottom:(CGFloat)padding
+{
+    _paddingBottom = padding;
+    if ( self.superlayer ) {
+        [self setNeedsDisplay];
+    }
+}
+
+@dynamic paddingOfWidth;
+- (CGFloat)paddingOfWidth
+{
+    return _paddingLeft + _paddingRight;
+}
+@dynamic paddingOfHeight;
+- (CGFloat)paddingOfHeight
+{
+    return _paddingTop + _paddingBottom;
+}
 
 - (void)layerJustBeenCreated
 {
@@ -218,6 +247,28 @@ static UIColor      *_gPYLabelColor = nil;
     }
 }
 
+// The content drawing size.
+- (CGSize)contentSizeInBounds:(CGSize)maxBounds
+{
+    NSStringDrawingOptions _op = NSStringDrawingUsesLineFragmentOrigin;
+    if ( _multipleLine == NO ) _op = NSStringDrawingUsesFontLeading;
+    CGSize _textSize = [_text boundingRectWithSize:CGSizeMake(maxBounds.width - _paddingLeft - _paddingRight,
+                                                              maxBounds.height - _paddingTop - _paddingBottom)
+                                           options:_op
+                                        attributes:@{NSFontAttributeName: _textFont}
+                                           context:nil].size;
+    return _textSize;
+}
+
+// Fit the the label's size in bounds
+- (void)fitSizeInBounds:(CGSize)maxBounds
+{
+    CGSize _s = [self contentSizeInBounds:maxBounds];
+    _s.height += self.paddingOfHeight;
+    _s.width += self.paddingOfWidth;
+    [self setBounds:CGRectMake(0, 0, _s.width, _s.height)];
+}
+
 // Display
 - (void)drawInContext:(CGContextRef)ctx
 {
@@ -236,19 +287,14 @@ static UIColor      *_gPYLabelColor = nil;
     //[self.textColor setFill];
     CGRect _bounds = self.bounds;
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > 70000 // 6.1
-    CGSize _textSize = [_text sizeWithAttributes:@{NSFontAttributeName:_textFont}];
+    CGSize _textSize = [self contentSizeInBounds:self.bounds.size];
 #else
     CGSize _textSize = [_text sizeWithFont:_textFont];
 #endif
     CGRect _textFrame = _bounds;
     _textFrame.origin.x += _paddingLeft;
     _textFrame.size.width -= (_paddingLeft + _paddingRight);
-    if ( _multipleLine ) {
-        _textSize.height = _textSize.height * (((int)_textSize.width / (int)_textFrame.size.width) + 1);
-        if ( _textSize.height > _bounds.size.height )
-            _textSize.height = _bounds.size.height;
-    }
-    _textFrame.origin.y = (_textFrame.size.height - _textSize.height) / 2;
+    _textFrame.origin.y = (_textFrame.size.height - _paddingTop - _paddingBottom - _textSize.height) / 2 + _paddingTop;
     _textFrame.size.height = _textSize.height;
     
     UIGraphicsPushContext(ctx);

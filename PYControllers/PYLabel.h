@@ -68,6 +68,17 @@
 // Padding the left side.
 @property (nonatomic, assign)   CGFloat             paddingLeft;
 @property (nonatomic, assign)   CGFloat             paddingRight;
+@property (nonatomic, assign)   CGFloat             paddingTop;
+@property (nonatomic, assign)   CGFloat             paddingBottom;
+
+@property (nonatomic, readonly) CGFloat             paddingOfWidth;
+@property (nonatomic, readonly) CGFloat             paddingOfHeight;
+
+// The content drawing size.
+- (CGSize)contentSizeInBounds:(CGSize)maxBounds;
+
+// Fit the the label's size in bounds
+- (void)fitSizeInBounds:(CGSize)maxBounds;
 
 @end
 

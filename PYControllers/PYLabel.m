@@ -201,10 +201,57 @@
     self.layer.paddingRight = paddingRight;
 }
 
+@dynamic paddingTop;
+- (CGFloat)paddingTop
+{
+    return self.layer.paddingTop;
+}
+- (void)setPaddingTop:(CGFloat)paddingTop
+{
+    self.layer.paddingTop = paddingTop;
+}
+
+@dynamic paddingBottom;
+- (CGFloat)paddingBottom
+{
+    return self.layer.paddingBottom;
+}
+- (void)setPaddingBottom:(CGFloat)paddingBottom
+{
+    self.layer.paddingBottom = paddingBottom;
+}
+
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {
     if ( newSuperview == nil ) return;
     [self.layer setNeedsDisplay];
+}
+
+@dynamic paddingOfWidth;
+- (CGFloat)paddingOfWidth
+{
+    return self.layer.paddingOfWidth;
+}
+@dynamic paddingOfHeight;
+- (CGFloat)paddingOfHeight
+{
+    return self.layer.paddingOfHeight;
+}
+
+// The content drawing size.
+- (CGSize)contentSizeInBounds:(CGSize)maxBounds
+{
+    return [self.layer contentSizeInBounds:maxBounds];
+}
+
+// Fit the the label's size in bounds
+- (void)fitSizeInBounds:(CGSize)maxBounds
+{
+    //[self.layer fitSizeInBounds:maxBounds];
+    CGSize _s = [self.layer contentSizeInBounds:maxBounds];
+    _s.width += self.layer.paddingOfWidth;
+    _s.height += self.layer.paddingOfHeight;
+    [self setBounds:CGRectMake(0, 0, _s.width, _s.height)];
 }
 
 @end
