@@ -43,7 +43,7 @@
 #import <UIKit/UIKit.h>
 #import "PYStaticLayer.h"
 
-@interface PYLabelLayer : PYStaticLayer
+@interface PYLabelLayer : PYLayer
 
 // Properties like UILabel.
 // But all this things will be used to draw text directly in layer.
