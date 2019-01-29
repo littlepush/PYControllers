@@ -208,7 +208,7 @@ static PYHUDView                        *_gQTHudView;
     
     // Display
     dispatch_async( dispatch_get_main_queue(), ^{
-        [_containerWindow makeKeyAndVisible];
+        [self->_containerWindow makeKeyAndVisible];
         [UIView animateWithDuration:[PYHUDView displayAnimationDuration] animations:^{
             [self setAlpha:1.f];
         }];
